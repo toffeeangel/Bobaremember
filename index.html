@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" role="document">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Bobaremember - Cute To-Do List Planner</title>
-    </head>
-    <body>
-        <div class="app-container" role="application" aria-label="Bobaremember to-do list application">
-            <header class="app-header" role="banner" aria-labelledby="">
-                <h1 id="app-title">Bobaremember</h1>
-                <p class="app-subtitle">Organize your day and acheive your goals with the cutest and most motivating to-do list!</p>
-            </header>
-
-            <main class="main-card" role="main" aria-label="Task management interface">
-                <section class="task-form-container" role="form" aria-labelledby="form-heading">
-                    <h2 id="form-heading" class="visually-hidden">Add New Task</h2>
-                    <form id="task-form">
-                        <!-- Form inputs will go here! -->
-                    </form>
-                    </section>
-
-                    <article class="tasks-container" role="region" aria-label="Task list container">
-                        <div class="section-header">
-                            <h2 id="tasks-header" class="section-title">My Tasks</h2>
-                            <nav role="navigation" aria-label="Task filter options">
-                                <div role="tablist" aria-label="Filter tasks">
-                                    <button class="filter-btn" role="tab" aria-selected="true" aria-controls="task-list">All</button>
-                                    <button class="filter-btn" role="tab" aria-selected="true" aria-controls="task-list">Active</button>
-                                    <button class="filter-btn" role="tab" aria-selected="true" aria-controls="task-list">Completed</button>
-                                </div>
-                            </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobaremember - Cute To-Do List Planner</title>
+</head>
+<body>
+    <div class="app-container" role="application" aria-label="TaskMaster to-do list application">
+        <header class="app-header" role="banner">
+            <h1 id="app-title" class="app-title">Bobaremember</h1>
+            <p class="app-subtitle">Organize your day and acheive your goals with the cutest and most motivating to-do list!</p>
+        </header>
+        
+        <main class="main-card" role="main" aria-label="Task management interface">
+            <section class="task-form-container" role="form" aria-labelledby="form-heading">
+                <h2 id="form-heading" class="visually-hidden">Add New Task</h2>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-input">Task Description</label>
+                        <input
+                            type="text"
+                            id="task-input"
+                            name="task-input"
+                            placeholder="What's your next to-do?"
+                            required
+                            minlength="3"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="task-priority">Priority</label>
+                        <select id="task-priority" name="task-priority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="due-date">Due Date</label>
+                        <input
+                            type="date"
+                            id="due-date"
+                            name="due-date"
+                            required
+                            min="2025-10-15"
+                        >
+                    </div>
+                    <span id="form-error" class="error" style="display: none;"></span>
+                    <div class="form-actions">
+                        <button type="submit">Add Task</button>
+                    </div>
+                </form>
+            </section>
+            
+            <article class="tasks-container" role="region" aria-label="Task list container">
+                <div class="section-header">
+                    <h2 id="tasks-heading" class="section-title">My Tasks</h2>
+                    <nav role="navigation" aria-label="Task filter options">
+                        <div role="tablist" aria-label="Filter tasks">
+                            <button class="filter-btn" role="tab" aria-selected="true" aria-controls="task-list">All</button>
+                            <button class="filter-btn" role="tab" aria-selected="false" aria-controls="task-list">Active</button>
+                            <button class="filter-btn" role="tab" aria-selected="false" aria-controls="task-list">Completed</button>
                         </div>
-
-                        <ul id="task-list" role="tabpanel" aria-live="polite">
-                            <!-- Task items will go here! -->
-                        </ul>
-
-                        <div class="tasks-summary">
-                            <p><span id="items-left" role="status" aria-live="polite">0</span> items left</p>
-                            <button id="clear-completed-btn">Clear completed tasks</button>
-                        </div>
-                    </article>
-            </main>
-        </div>
+                    </nav>
+                </div>
+                
+                <ul id="task-list" role="tabpanel" aria-live="polite">
+                    <!-- Task items will go here! -->
+                </ul>
+                
+                <div class="tasks-summary">
+                    <p><span id="items-left" role="status" aria-live="polite">0</span> items left</p>
+                    <button id="clear-completed-btn">Clear completed tasks</button>
+                </div>
+            </article>
+        </main>
+        
         <footer class="app-footer" role="contentinfo">
-            <p>Created with HTML, CSS and JavaScript</p>
             <p>© 2025 toffeeangel 🧋🫧</p>
+       
         </footer>
-    </body>
+    </div>
+    <script src="app.js"></script>
+</body>
 </html>
