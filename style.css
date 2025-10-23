@@ -1,0 +1,80 @@
+/* Bobaremember Stylesheet */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h3 {
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #907ABF;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* Typography */
+h2 {
+    font-weight: 400;
+    line-height: 1.6;
+    color: #F2DCEC;
+}
+
+/* App Container */
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.app-title {
+    font-size: 32px;
+    font-family: Borel;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    color: #F2DCEC;
+}
+
+.app-subtitle {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Main Card */
+.main-card {
+    background-color: #5E518C;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+}
+
+/* Form Section */
+.task-form-container {
+    padding: 25px;
+    background-color: #5e5386;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+/* Tasks Section */
+.tasks-container {
+    padding: 20px;
+}
+
+/* Footer */
+.app-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
