@@ -20,7 +20,6 @@ body, h3 {
 /* Typography */
 h2 {
     font-weight: 400;
-    line-height: 1.6;
     color: #F2DCEC;
 }
 
@@ -63,13 +62,142 @@ h2 {
     background-color: #5e5386;
 }
 
+#form-heading {
+    margin-bottom: 15px;
+}
+
 .section-title {
     margin-bottom: 15px;
 }
 
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#task-input #task-priority #task-date {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#task-input:focus #task-priority:focus #task-date:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.error {
+    color: #fff;
+    background-color: rgb(255, 166, 166);
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+button[type="submit"] {
+    background-color: #F2DCEC;
+    color: #362f50;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: cell;
+}
+
+button[type="submit"]:hover {
+    background-color: #f4c9e8;
+}
+
 /* Tasks Section */
 .tasks-container {
-    padding: 20px;
+    padding: 20px 25px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Filter Buttons */
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color:#f4c9e8;
+    font-size: 15px;
+    padding: 5px 3px;
+}
+
+.filter-btn.active {
+    color: #ffa0e3;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    color: #f4b7e3;
+}
+
+/* Task List */
+#task-list {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+/* Empty state to be replaced with actual tasks */
+#task-list:empty::before {
+    content: "Don't you have things to do? Add a task to get started! 🦊";
+    display: block;
+    text-align: center;
+    color: #F2DCEC;
+    padding: 30px 0;
+}
+
+/* Task Summary */
+.tasks-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 5px 0;
+    border-top: 1px solid #ffffff;
+    font-size: 14px;
+}
+
+#clear-completed-btn {
+    background: none;
+    border: none;
+    color: #f4c9e8;
+    font-size: 14px;
+}
+
+#clear-completed-btn:hover {
+    color: #f4b7e3;
 }
 
 /* Footer */
